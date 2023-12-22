@@ -69,7 +69,7 @@ class meralist:
         if type(pos) == int:
             self.del_pos(pos)
         else:
-            print('Kuch to error h bhaiya ji')
+            print('Kuch to error h varun bhaiya ji')
             print(pos)
             
 
@@ -78,7 +78,7 @@ class meralist:
 s = meralist()
 s.append('2')
 s.append('21')
-
-print(s)
-s._remove('21')
+s.append('21')
+s.append('21')
+s.append('21')
 print(s)
