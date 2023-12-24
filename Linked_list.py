@@ -8,12 +8,25 @@ class linked:
         self.n = 0 
 
     def __str__(self):
-        for i in range(self.n):
-            return self.data
+        curr = self.head
+        result = ""
+        while curr != None:
+            result = result + str(curr.data) + "->"
+            curr = curr.next
+        return result[:-2]
         
-# a = node(1)    
-# b = node(2)    
-# c = node(3)
-# print(a,b,c)
+    def insert(self,value):
+        new_node = node(value)
+        if self.n == 0 :
+            self.head = new_node
+
+        else:
+            new_node.next = self.head
+            self.head = new_node
+        self.n = self.n + 1
+
+    def _append (self,value):
+        pass
+        
 
 
