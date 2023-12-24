@@ -26,7 +26,24 @@ class linked:
         self.n = self.n + 1
 
     def _append (self,value):
-        pass
+        new_node = node(value)
+        if self.n == 0 :
+            self.head = new_node
+            self.n = self.n + 1
+            return
+        curr = self.head
+        while curr.next != None :
+            curr = curr.next
+        curr.next = new_node
+        self.n = self.n + 1
         
+l = linked()
+l.insert(1)
+l.insert(2)
+l.insert(3)
+l._append(4)
+l._append(4)
+l._append(4)
+print(l)
 
 
