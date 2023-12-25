@@ -53,6 +53,12 @@ class linked:
         else:
             print("Item not found")
 
+    def clear(self):
+        self.head = None
+        self.n = 0
+
+
+
 l = linked()
 l.insert(1)
 l.insert(2)
@@ -62,6 +68,9 @@ print(l)
 l.insert_after(3,69)
 l.insert_after(69,79)
 print(l)
+l.clear()
+print(l)
+print(11)
 
 
 
