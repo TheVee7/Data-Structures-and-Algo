@@ -37,13 +37,34 @@ class linked:
         curr.next = new_node
         self.n = self.n + 1
         
+    def insert_after(self,after,value):
+        new_node = node(value)
+        curr = self.head
+
+        while curr != None:
+            if curr.data == after:
+                break
+            curr = curr.next
+
+        if curr !=  None :
+            new_node.next = curr.next 
+            curr.next = new_node
+            self.n += self.n
+        else:
+            print("Item not found")
+
 l = linked()
 l.insert(1)
 l.insert(2)
 l.insert(3)
-l._append(4)
-l._append(4)
-l._append(4)
+l.insert(4)
 print(l)
+l.insert_after(3,69)
+l.insert_after(69,79)
+print(l)
+
+
+
+
 
 
