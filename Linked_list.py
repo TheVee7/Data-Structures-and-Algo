@@ -79,20 +79,44 @@ class linked:
         curr.next = None
         self.n = self.n + 1
 
+
+    def remove (self,value):
+        if self.n == 0 :
+            print("I think ll is empty")
+        curr = self.head
+        if curr.next.data == value:
+            self.delete_head
+        
+        curr = self.head
+        while curr.next != None :
+            if curr.next.data == value :
+                break
+            
+            curr = curr.next
+            if curr.next == None :
+                print('item not found')
+            else :
+                curr.next = curr.next.next
+            self.n =  self.n + 1
+l = linked()
+l.insert(1)
+l.insert(2)
+l.insert(3)
+l.insert(4)
+l.insert(5)
+print(l)
+l.remove(5)
+print(l)
+
+
+
+
+
+
+
             
 
-l = linked()
-# l.insert(1)               
-# l.insert(2)               
-# l.insert(3)               
-# l.insert(4)               
 
-print(l)
-# l.del_tail()
-# l.del_tail()
-# l.del_tail()
-# l.del_tail()
-# l.del_tail()
 
 
             
@@ -100,12 +124,6 @@ print(l)
 
 
     
-
-
-
-
-
-
 
 
 
