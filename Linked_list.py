@@ -57,20 +57,52 @@ class linked:
         self.head = None
         self.n = 0
 
+    def delete_head(self):
+        # curr = self.head
+        if self.n == 0 :
+            print("EMPTY linked list..")
+        else:
+            self.head = self.head.next
+        self.n = self.n + 1
 
+    def del_tail(self):
+        curr = self.head
+        if self.n == 0:
+            print("this ll is empty")
+        
+        if curr.next == None :
+            return self.delete_head
+        
+            
+        while curr.next.next != None:
+            curr = curr.next
+        curr.next = None
+        self.n = self.n + 1
+
+            
 
 l = linked()
-l.insert(1)
-l.insert(2)
-l.insert(3)
-l.insert(4)
+# l.insert(1)               
+# l.insert(2)               
+# l.insert(3)               
+# l.insert(4)               
+
 print(l)
-l.insert_after(3,69)
-l.insert_after(69,79)
-print(l)
-l.clear()
-print(l)
-print(11)
+# l.del_tail()
+# l.del_tail()
+# l.del_tail()
+# l.del_tail()
+# l.del_tail()
+
+
+            
+
+
+
+    
+
+
+
 
 
 
