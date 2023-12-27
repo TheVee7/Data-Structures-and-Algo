@@ -1,5 +1,0 @@
-l.del_tail()
-# l.del_tail()
-# l.del_tail()
-# l.del_tail()
-# l.del_tail()
