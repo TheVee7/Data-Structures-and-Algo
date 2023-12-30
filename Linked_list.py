@@ -81,40 +81,56 @@ class linked:
 
 
     def remove (self,value):
-        if self.n == 0 :
+        if self.head == None :
             print("I think ll is empty")
-        curr = self.head
-        if curr.next.data == value:
-            self.delete_head
+            return
+        
+        if self.head.data == value:
+            return self.delete_head()
         
         curr = self.head
         while curr.next != None :
             if curr.next.data == value :
                 break
-            
             curr = curr.next
-            if curr.next == None :
-                print('item not found')
-            else :
-                curr.next = curr.next.next
-            self.n =  self.n + 1
-l = linked()
-l.insert(1)
-l.insert(2)
-l.insert(3)
-l.insert(4)
-l.insert(5)
-print(l)
-l.remove(5)
-print(l)
-
-
-
-
-
-
-
             
+        if curr.next == None :
+            print('item not found')
+        else :
+            curr.next = curr.next.next
+            self.n =  self.n - 1
+        
+    def search_value(self,value):
+        curr = self.head
+        pos = 0 
+        while curr != None:
+            if curr.data == value:
+                print(pos)
+            curr = curr.next
+            pos = pos + 1
+
+    def search_index(self,item):
+        curr = self.head
+        pos = 0 
+        while curr != None:
+            if pos == item:
+                print(curr.data)
+            curr = curr.next
+            pos = pos + 1
+
+
+
+
+l = linked()
+l._append(1)
+l._append(2)
+l._append(3)
+l._append(4)
+l._append(5)
+print(l)
+            
+l.search_index(3)
+l.search_index(1)
 
 
 
